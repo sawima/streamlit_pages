@@ -1,5 +1,9 @@
 import streamlit as st
 
+print(st.session_state.name)
+
+st.write(st.session_state.name)
+
 if 'sum' not in st.session_state:
     st.session_state.sum = ''
 

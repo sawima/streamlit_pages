@@ -1,5 +1,10 @@
 import streamlit as st
 
+
+print(st.session_state.name)
+
+st.write(st.session_state.name)
+
 animal = st.form('my_animal')
 
 # This is writing directly to the main body. Since the form container is

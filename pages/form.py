@@ -40,4 +40,6 @@ alphaB = int(opacityB*255/100)
 df['color'] = np.where(df.team=='A',colorA+f'{alphaA:02x}',colorB+f'{alphaB:02x}')
 df['size'] = np.where(df.team=='A',sizeA, sizeB)
 
+print(df)
+
 st.map(df, size='size', color='color')

@@ -1,0 +1,10 @@
+services:
+  streamlitdemo:
+    build: .
+    ports:
+      - "8001:8001"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.template.rule=Host(`streamlitdemo.${DOMAIN_NAME}`)
+      - traefik.http.routers.template.entrypoints=http,https
+      - traefik.http.routers.template.tls.certresolver=letsencrypt

@@ -2,6 +2,8 @@ FROM python:3.9-slim
 WORKDIR /app
 
 COPY . .
+RUN export http_proxy=socks5://localhost:1080
+RUN export https_proxy=socks5://localhost:1080
 RUN pip3 install -r requirements.txt
 
 EXPOSE 8001

@@ -10,5 +10,6 @@ st.write(pd.DataFrame({
 st.session_state.name="kimatech"
 
 st.write("use compose to deploy this app")
+st.write("seems everything goes well")
 
 print(st.session_state.name)

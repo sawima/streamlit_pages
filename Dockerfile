@@ -3,11 +3,6 @@ WORKDIR /app
 
 COPY . .
 
-# RUN export http_proxy=socks5://localhost:1080
-# RUN export https_proxy=socks5://localhost:1080
-
-
-
 RUN apt-get update && apt-get install -y build-essential curl software-properties-common
 RUN pip3 install -r requirements.txt
 

@@ -1,8 +1,12 @@
 services:
   streamlitdemo:
-    build: .
+    image: 378162708610.dkr.ecr.cn-northwest-1.amazonaws.com.cn/streamlit/studybasic:latest
+    volumes:
+      - .:/app
     ports:
       - "8001:8001"
+    command: 
+      - streamlit run /app/streamlitdemo.py --server.port 8001
     labels:
       - traefik.enable=true
       - traefik.http.routers.template.rule=Host(`streamlitdemo.${DOMAIN_NAME}`)

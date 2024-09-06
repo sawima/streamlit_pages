@@ -1,8 +1,8 @@
 services:
   streamlitdemo:
     image: 378162708610.dkr.ecr.cn-northwest-1.amazonaws.com.cn/streamlit/studybasic:latest
-    volumes:
-      - ./:/app
+    # volumes:
+    #   - ./:/app
     # ports:
     #   - "8001:8001"
     # build: .
@@ -10,6 +10,6 @@ services:
     #   - streamlit run /home/main.py --server.port 8001
     labels:
       - traefik.enable=true
-      - traefik.http.routers.template.rule=Host(`${PREFIX}.${DOMAIN_NAME}`)
-      - traefik.http.routers.template.entrypoints=http,https
-      - traefik.http.routers.template.tls.certresolver=letsencrypt
+      # - traefik.http.routers.template.rule=Host(`${PREFIX}.${DOMAIN_NAME}`)
+      # - traefik.http.routers.template.entrypoints=http,https
+      # - traefik.http.routers.template.tls.certresolver=letsencrypt
